@@ -183,7 +183,7 @@ def get_graph(chart, year, children1, children2, c3, c4, c5):
             
             # Number of flights under different cancellation categories
             bar_fig = px.bar(bar_data, x='Month', y='Flights', color='CancellationCode', title='Monthly Flight Cancellation')
-            like_fig = px.line(line_data, x='Month', y='AirTime', color='Reporting_Airline', title='flight time by reporting airline')
+            line_fig = px.line(line_data, x='Month', y='AirTime', color='Reporting_Airline', title='flight time by reporting airline')
             
             # Percentage of diverted airport landings per reporting airline
             pie_fig = px.pie(div_data, values='Flights', names='Reporting_Airline', title='% of flights by reporting airline')
